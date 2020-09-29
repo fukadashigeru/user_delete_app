@@ -1,0 +1,30 @@
+p#notice
+  = notice
+.min-h-screen.bg-gray-100.m-10
+  .bg-white.shadow.overflow-hidden.sm:rounded-lg
+    .px-4.py-5.border-b.border-gray-200.sm:px-6
+      h3.text-lg.leading-6.font-medium.text-gray-900
+        | User詳細
+      p.mt-1.max-w-2xl.text-sm.leading-5.text-gray-500
+        | Userの詳細画面
+      .px-4.py-5.sm:p-0
+        dl
+          .sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6.sm:py-5
+            dt.text-sm.leading-5.font-medium.text-gray-500
+              | Name:
+            dd.mt-1.text-sm.leading-5.text-gray-900.sm:mt-0.sm:col-span-2
+              = @user.name
+              .mt-8.sm:mt-0.sm:grid.sm:grid-cols-3.sm:gap-4.sm:border-t.sm:border-gray-200.sm:px-6.sm:py-5
+                dt.text-sm.leading-5.font-medium.text-gray-500
+                  | Email:
+                dd.mt-1.text-sm.leading-5.text-gray-900.sm:mt-0.sm:col-span-2
+                  = @user.email
+      .btn-wrapper
+        button.bg-red-500.hover:bg-red-700.text-white.font-bold.py-2.px-4.m-3.rounded(
+          type="button"
+        )
+          | アカウント削除
+    .pt-4
+      = link_to 'Edit', edit_user_path(@user), class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+      |  |
+      = link_to 'Back', users_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
