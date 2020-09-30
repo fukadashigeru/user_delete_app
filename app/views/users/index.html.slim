@@ -28,8 +28,8 @@ p#notice
                 td.px-6.py-4.whitespace-no-wrap.text-sm.leading-5.text-gray-500
                   = link_to 'Show', user
                 td.px-6.py-4.whitespace-no-wrap.text-sm.leading-5.text-gray-500
-                  = link_to 'Edit', edit_user_path(user)
+                  = link_to 'Edit', edit_user_path(user), class: 'disabled'
                 / td.px-6.py-4.whitespace-no-wrap.text-sm.leading-5.text-gray-500
                 /   = link_to 'Destroy', user, method: :delete, data: {confirm: 'Are you sure?'}
   .mx-8
-    = link_to 'New User', new_user_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+    = link_to 'New User', new_user_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled'
