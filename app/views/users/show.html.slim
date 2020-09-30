@@ -49,7 +49,9 @@ p#notice
             | アカウント削除
           .mt-2
             p.text-sm.leading-5.text-gray-500
-              | 削除する場合は「#{@user.name}」と入力してから、削除ボタンを押してください。
+              | 削除する場合は「#{@user.name}」と入力してから、アカウント削除ボタンを押してください。
+      .mt-5.mx-8
+        input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-gray-700.leading-tight.focus:outline-none.focus:shadow-outline(placeholder="ユーザー名を入力" data-activation-target="##{delete_btn_id}" data-activation-value="#{@user.name}")
       .mt-5.sm:mt-4.sm:flex.sm:flex-row-reverse
         span.flex.w-full.rounded-md.shadow-sm.sm:ml-3.sm:w-auto
           button.inline-flex.justify-center.w-full.rounded-md.border.border-transparent.px-4.py-2.bg-red-600.text-base.leading-6.font-medium.text-white.shadow-sm.hover:bg-red-500.focus:outline-none.focus:border-red-700.focus:shadow-outline-red.transition.ease-in-out.duration-150.sm:text-sm.sm:leading-5 type="button"
