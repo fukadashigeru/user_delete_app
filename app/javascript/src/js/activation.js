@@ -1,7 +1,6 @@
 document.addEventListener('input', (e) => {
     const input = e.target
     const targetSelector = input.dataset.activationTarget
-    console.log(targetSelector)
     if (targetSelector) {
         const activationValue = input.dataset.activationValue
         const targets = document.querySelectorAll(targetSelector)
